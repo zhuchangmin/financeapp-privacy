@@ -1,60 +1,203 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 豹宝记账</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #333; }
-        h1 { color: #007AFF; }
-        h2 { color: #555; margin-top: 30px; font-size: 1.2em; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 6px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="豹宝记账隐私政策：本地优先、可选 iCloud 同步、数据导出与删除说明。" />
+  <title>隐私政策 - 豹宝记账</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f4f5f7;
+      --surface: #ffffff;
+      --text: #191a1d;
+      --secondary: #62656c;
+      --line: #dedfe3;
+      --accent: #9b6700;
+      --accent-surface: #fff3d1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #111214;
+        --surface: #1c1d20;
+        --text: #f4f4f5;
+        --secondary: #b5b6ba;
+        --line: #36383d;
+        --accent: #f1bd4c;
+        --accent-surface: #382d14;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+      letter-spacing: 0;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    header div,
+    main,
+    footer {
+      width: min(760px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header div {
+      padding: 44px 0 32px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.25;
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--secondary);
+      font-size: 15px;
+    }
+
+    .principles {
+      margin: 28px 0 8px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-surface);
+    }
+
+    main {
+      padding: 16px 0 48px;
+    }
+
+    section {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p,
+    ul {
+      margin: 8px 0 0;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    strong {
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
 </head>
 <body>
-    <h1>隐私政策</h1>
-    <p><strong>最后更新日期：2026 年 7 月</strong></p>
+  <header>
+    <div>
+      <h1>豹宝记账隐私政策</h1>
+      <p class="updated">最后更新日期：2026 年 7 月 28 日</p>
+      <p class="principles">
+        <strong>本地优先。</strong>账本默认只保存在当前设备；iCloud 同步仅在您主动确认后开启。
+      </p>
+    </div>
+  </header>
 
-    <h2>核心承诺</h2>
-    <p>本应用是一款纯本地记账工具。<strong>财务数据默认保存在您的设备本机。开发者无法访问、查看或收集您的任何财务数据。</strong></p>
+  <main>
+    <section>
+      <h2>适用范围</h2>
+      <p>本政策适用于“豹宝记账”，说明本应用如何保存、同步、导出和删除您主动录入的记账数据。</p>
+    </section>
 
-    <h2>我们不收集的信息</h2>
-    <ul>
-        <li>不收集身份信息</li>
-        <li>不收集银行账户、信用卡号</li>
-        <li>不收集交易流水、收支记录</li>
-        <li>不收集位置信息</li>
-        <li>不使用第三方分析或广告 SDK</li>
-        <li>不跨 App 追踪用户</li>
-    </ul>
+    <section>
+      <h2>本地数据</h2>
+      <p>账本、账户、流水、附件、预算、成员、自定义分类、周期记账、攒钱目标和债权债务信息默认保存在应用沙盒内。</p>
+      <p>主题、当前账本、功能开关和本地锁定状态等偏好保存在当前设备。专业版功能体验模式使用独立本地数据容器，退出后重置，不进入正式账本。</p>
+    </section>
 
-    <h2>设备上存储的信息</h2>
-    <p>以下数据默认存储在您的设备本地：</p>
-    <ul>
-        <li>收支流水记录</li>
-        <li>账户信息</li>
-        <li>分类设置</li>
-        <li>应用偏好</li>
-    </ul>
+    <section>
+      <h2>可选的 iCloud 同步</h2>
+      <p>当您在“设置 → 数据 → 备份管理”中主动开启 iCloud 同步时，正式账本及流水附件会通过 Apple CloudKit 保存到当前 Apple 账户的私有数据库，并在登录同一 Apple 账户且安装本应用的设备间同步。专业版功能体验数据不会上传。</p>
+      <p>本应用不会取得您的 Apple 账户密码。开发者不运营接收账本数据的自建服务器，也不接入第三方广告或用户行为分析服务。</p>
+      <p>CloudKit 数据在传输过程中和 Apple 服务器上会加密。端到端加密范围取决于您的 iCloud 数据保护设置及数据类型，不能一概表述为所有同步数据均采用端到端加密。</p>
+    </section>
 
-    <h2>数据导出</h2>
-    <p>您可以在应用内主动导出 CSV 或 JSON 备份文件，并自行决定保存位置。</p>
+    <section>
+      <h2>备份、导入和对外发送</h2>
+      <ul>
+        <li>JSON 是完整备份格式，覆盖全部业务模型、关系和流水附件。</li>
+        <li>CSV 与 Excel 适合查看和迁移核心数据。</li>
+        <li>系统分享或邮件发送由您主动触发，文件会交给您选择的系统服务或接收方处理。</li>
+        <li>导入外部文件时，本应用会先校验文件结构和数据关联；校验失败不会写入半份数据。</li>
+      </ul>
+    </section>
 
-    <h2>数据安全</h2>
-    <ul>
-        <li>默认设备本地存储</li>
-        <li>支持 Face ID / Touch ID 生物识别锁定</li>
-        <li>删除应用即彻底清除所有本地数据</li>
-    </ul>
+    <section>
+      <h2>数据删除与同步关闭</h2>
+      <ul>
+        <li>关闭 iCloud 同步会停止当前设备后续同步，但保留本机数据和已有 iCloud 副本。</li>
+        <li>删除本应用会删除当前设备的本地副本，<strong>不会自动删除 iCloud 私有数据库中的副本</strong>。</li>
+        <li>删除 iCloud 数据前，请先导出完整 JSON，并确保其他设备已停止同步，避免数据被再次上传。</li>
+        <li>您可以通过 Apple 提供的 iCloud 数据管理入口处理本应用的云端数据；具体入口可能随系统版本变化。</li>
+      </ul>
+    </section>
 
-    <h2>您的权利（依据《个人信息保护法》）</h2>
-    <ul>
-        <li>随时查看应用内所有数据</li>
-        <li>通过导出功能导出数据</li>
-        <li>删除应用即完全删除数据</li>
-    </ul>
+    <section>
+      <h2>数据安全</h2>
+      <ul>
+        <li>本应用支持 Face ID 或 Touch ID 本地锁定。</li>
+        <li>首次开启 iCloud 同步前会创建一份完整 JSON 备份。</li>
+        <li>同步失败不会主动删除本地账本或附件。</li>
+        <li>请妥善保护设备密码、Apple 账户、导出文件和接收邮箱。</li>
+      </ul>
+    </section>
 
-    <p>如有隐私相关问题，请通过 App Store 联系开发者。</p>
+    <section>
+      <h2>我们不主动收集的信息</h2>
+      <p>本应用不主动收集您的真实姓名、联系方式、精确位置、广告标识符或浏览历史，也不要求您提交银行卡号、信用卡号或 Apple 账户密码。您在备注或附件中自行录入的内容由您自行决定。</p>
+    </section>
+
+    <section>
+      <h2>儿童隐私</h2>
+      <p>本应用不面向 13 岁以下儿童，也不会有意收集儿童个人信息。</p>
+    </section>
+
+    <section>
+      <h2>政策更新与联系</h2>
+      <p>当数据处理方式变化时，我们会更新本政策及日期。重大变化会在适当位置提示。</p>
+      <p>如有隐私、数据导出或删除相关问题，请通过 App Store 产品页提供的开发者联系渠道联系我们。</p>
+    </section>
+  </main>
+
+  <footer>豹宝记账 · 隐私优先的个人记账 App</footer>
 </body>
 </html>
