@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="豹宝记账技术支持：常见问题、数据安全说明和问题反馈入口。" />
+  <title>技术支持 - 豹宝记账</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f5f6f8;
+      --surface: #ffffff;
+      --text: #17181b;
+      --secondary: #63666d;
+      --line: #dfe1e5;
+      --accent: #8b5b00;
+      --action: #176b4d;
+      --action-text: #ffffff;
+      --notice: #fff2cf;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #101113;
+        --surface: #1c1d20;
+        --text: #f4f4f5;
+        --secondary: #b6b8bd;
+        --line: #37393e;
+        --accent: #f0bd55;
+        --action: #69c99f;
+        --action-text: #102219;
+        --notice: #352b14;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    header > div,
+    main,
+    footer {
+      width: min(760px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 36px 0 30px;
+    }
+
+    .app-icon {
+      width: 76px;
+      height: 76px;
+      flex: 0 0 76px;
+      border-radius: 18px;
+      box-shadow: 0 7px 22px rgb(0 0 0 / 14%);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .subtitle,
+    .updated {
+      margin: 4px 0 0;
+      color: var(--secondary);
+      font-size: 15px;
+    }
+
+    main {
+      padding: 12px 0 44px;
+    }
+
+    section {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    p,
+    ul,
+    ol {
+      margin: 8px 0 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .contact {
+      padding: 18px 20px;
+      background: var(--notice);
+      border-left: 4px solid var(--accent);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: var(--action);
+      color: var(--action-text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a {
+      color: var(--action);
+    }
+
+    footer {
+      padding: 22px 0 36px;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      header > div {
+        align-items: flex-start;
+        padding-top: 28px;
+      }
+
+      .app-icon {
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img class="app-icon" src="support-app-icon.png" alt="豹宝记账 App 图标" width="76" height="76" />
+      <div>
+        <h1>豹宝记账支持</h1>
+        <p class="subtitle">账本、同步、备份与专业版问题帮助</p>
+        <p class="updated">最后更新日期：2026 年 8 月 2 日</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contact">
+        <h2>需要进一步帮助？</h2>
+        <p>请通过公开问题反馈入口联系我们。提交前请隐藏账单金额、账户名称、附件和其他隐私信息，不要上传完整备份或数据库文件。</p>
+        <a class="button" href="https://github.com/zhuchangmin/financeapp-privacy/issues/new" rel="noopener noreferrer">提交问题</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>开始排查</h2>
+
+      <h3>iCloud 同步没有更新</h3>
+      <ol>
+        <li>确认两台设备登录同一个 Apple 账户并保持联网。</li>
+        <li>在“设置 → 数据 → 备份管理”确认 iCloud 同步已开启且状态为“iCloud 可用”。</li>
+        <li>分别将 App 切到前台，等待同步收敛后再核对账本和流水。</li>
+        <li>不要反复退出 iCloud、删除 App 或覆盖导入备份；如仍异常，请先导出完整 JSON。</li>
+      </ol>
+
+      <h3>换机或恢复数据</h3>
+      <p>完整迁移优先使用 JSON 备份。CSV 与 Excel 适合查看和迁移核心数据，但不替代完整 JSON。导入前请保留原设备和原备份。</p>
+
+      <h3>专业版购买或恢复购买</h3>
+      <p>在“设置 → 专业版”确认产品正常加载。更换设备后请使用原购买 Apple 账户，并点击“恢复购买”。扣款、退款和订阅管理由 Apple 处理。</p>
+
+      <h3>提醒没有出现</h3>
+      <p>请在系统设置中确认豹宝记账的通知权限已开启，并检查对应负债账户的账单日、还款日和提醒开关。</p>
+    </section>
+
+    <section>
+      <h2>反馈时请提供</h2>
+      <ul>
+        <li>豹宝记账版本号和构建号。</li>
+        <li>设备型号及 iOS 或 iPadOS 版本。</li>
+        <li>问题发生前后的操作步骤和预期结果。</li>
+        <li>已隐藏敏感内容的截图；不要提交Apple账户密码、验证码、真实账单或完整备份。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>数据与隐私</h2>
+      <p>财务数据默认保存在设备本机；iCloud 同步仅在您主动开启后使用当前 Apple 账户的 CloudKit 私有数据库。查看完整说明：</p>
+      <p><a href="./">豹宝记账隐私政策</a></p>
+    </section>
+  </main>
+
+  <footer>豹宝记账 · 隐私优先的个人记账 App</footer>
+</body>
+</html>
